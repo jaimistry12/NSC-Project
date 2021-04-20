@@ -40,7 +40,11 @@ class App extends React.Component {
 
   constructor(props){
     super(props);
-    Firebase.initializeApp(config.firebase);
+
+    if (!Firebase.apps.length) {
+      Firebase.initializeApp(config.firebase);
+    }
+    
 
     this.state = {
       developers: []
