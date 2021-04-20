@@ -1,38 +1,6 @@
-/*
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-import Firebase from 'firebase';
-import config from './config';
-
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
-*/
-
 import React from 'react';
 
-import Firebase from 'firebase';
+import firebase from 'firebase';
 import config from './config';
 
 
@@ -41,17 +9,24 @@ class App extends React.Component {
   constructor(props){
     super(props);
 
-    if (!Firebase.apps.length) {
-      Firebase.initializeApp(config.firebase);
+    console.log(firebase.apps.length)
+    if (!firebase.apps.length) {
+      firebase.initializeApp(config);
+      console.log("New Firebase initiliazed"); 
+      console.log(firebase.apps.length)
+    }else {
+      firebase.app(); 
+      console.log("Firebase old"); 
     }
-    
-
+    let db = firebase.database()
+    console.log("Firebase initiliazed"); 
     this.state = {
       developers: []
     }
   }
 
   componentDidMount() {
+    
     this.getUserData();
   }
   
@@ -64,12 +39,12 @@ class App extends React.Component {
   }
 
   writeUserData = () => {
-    Firebase.database().ref('/').set(this.state);
+    firebase.database().ref('/').set(this.state);
     console.log('DATA SAVED');
   }
   
   getUserData = () => {
-    let ref = Firebase.database().ref('/');
+    let ref = firebase.database().ref('/');
     ref.on('value', snapshot => {
       const state = snapshot.val();
       this.setState(state);
