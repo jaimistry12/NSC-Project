@@ -18,11 +18,15 @@ class App extends React.Component {
       firebase.app(); 
       console.log("Firebase old"); 
     }
-    let db = firebase.database()
     console.log("Firebase initiliazed"); 
     this.state = {
       developers: []
     }
+
+    // how to populate!!!
+    firebase.database().ref('/').update({message:"Hello"});
+    
+
   }
 
   componentDidMount() {
