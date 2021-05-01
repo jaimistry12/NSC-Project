@@ -1,0 +1,11 @@
+{
+    "API Gateway": [
+       { "HTTP APIs": "1" },
+       { "REST APIs": "3.50" },
+       { "WebSocket APIs": "87.61"}
+    ],
+    "EC2": [
+        { "Amazon Elastic Block Storage (EBS)": "3.50"},
+        { "EC2 instance specifications": "61.54"}
+    ]
+ }
