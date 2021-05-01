@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Badge, Button, Container, CardDeck } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import classes from "../Styles/HomeStyle.css";
 import pageStyles from "../Styles/PageStyle.css";
