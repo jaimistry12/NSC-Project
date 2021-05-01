@@ -1,31 +1,74 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
-import classes from "../Styles/HomeStyle.css";
-import pageStyles from "../Styles/PageStyle.css";
 
 export function Home() {
   const history = useHistory();
   return (
     <React.Fragment>
-      <div className={classes.Content}>
-        <div className={classes.SubContent}>
-          <h1 className={pageStyles.title}>Saas Price Optimization</h1>
-          <p className={"mb-2 " + pageStyles.bigText}>
+      <div
+        style={{
+          backgroundColor: "rgba(203, 221, 250, 0.808)",
+          position: "absolute",
+          top: 0,
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: 0
+        }}
+      >
+        <div
+          style={{
+            textAlign: "center"
+          }}
+        >
+          <h1
+            style={{
+              color: "#77777",
+              fontFamily: "Verdana",
+              fontWeight: "bold",
+              fontSize: "60px",
+              textAlign: "center"
+            }}
+          >
+            Saas Price Optimization
+          </h1>
+          <p
+            style={{
+              color: "#77777",
+              fontFamily: "Verdana",
+              fontSize: "25px",
+              textAlign: "center"
+            }}
+          >
             <b>Optimize prices for AWS blah blah</b>
           </p>
-          <p className={pageStyles.bigText}>
+          <p
+            style={{
+              color: "#555",
+              fontFamily: "Verdana",
+              fontSize: "25px",
+              fontWeight: "normal",
+              textAlign: "center"
+            }}
+          >
             <b>Have a look around, we hope you enjoy what we have to offer!</b>
           </p>
 
           <Button
             style={{
-              color: "#587758",
-              margin: "5%"
-              // boxShadow: "5px 5px 3px rgba(46, 46, 46, 0.62)",
+              color: "white",
+              backgroundColor: "#153fc8d8",
+              margin: "5%",
+              fontSize: "20px",
+              fontFamily: "Verdana",
+              alignItems: "center",
+              justifyContent: "center",
+              position: "relative"
             }}
             onClick={() => history.push("./Calculator")}
-            className="btn btn-outline-dark"
           >
             Click here to optimize
           </Button>
