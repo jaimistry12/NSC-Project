@@ -1,11 +1,14 @@
 {
     "API Gateway": [
-       { "HTTP APIs": "1" },
-       { "REST APIs": "3.50" },
-       { "WebSocket APIs": "87.61"}
+       { "HTTP_APIs": "1" },
+       { "REST_APIs": "3.50" },
+       { "WebSocket_APIs": "87.61"}
     ],
     "EC2": [
-        { "Amazon Elastic Block Storage (EBS)": "3.50"},
-        { "EC2 instance specifications": "61.54"}
+        { "Amazon_Elastic_Block_Storage_EBS": "3.00"},
+        { "EC2_instance_specifications": "61.54"}
+    ],
+    "Database_Server": [
+        { "DBGB_monthly_space_cost": "0.20"}
     ]
  }
