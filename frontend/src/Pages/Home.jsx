@@ -33,7 +33,7 @@ export function Home() {
               textAlign: "center"
             }}
           >
-            Saas Price Optimization
+            SAAS Price Optimization
           </h1>
           <p
             style={{
@@ -43,7 +43,7 @@ export function Home() {
               textAlign: "center"
             }}
           >
-            <b>Optimize prices for AWS blah blah</b>
+            <b>Optimized Price Calculations</b>
           </p>
           <p
             style={{
@@ -70,7 +70,7 @@ export function Home() {
             }}
             onClick={() => history.push("./Calculator")}
           >
-            Click here to optimize
+            Calculate
           </Button>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Row, Jumbotron } from "react-bootstrap";
-import Select from "react-select";
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
 
 function Calculator() {
   const numApi = [
@@ -58,14 +59,12 @@ function Calculator() {
         >
           <Row>
             <h1>Number of API's:</h1>
-            <Select
-              //styles={CustomSelectStyles}
-              options={numApi}
-              defaultValue={{ label: "Default" }}
-              // onChange={selectedOptions => {
-              //   setSortParams(selectedOptions.value);
-              // }}
-            ></Select>
+            <InputGroup size="lg" className="mb-3">
+              <FormControl
+                aria-label="Default"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </InputGroup>
           </Row>
         </div>
         <br />
@@ -77,14 +76,29 @@ function Calculator() {
         >
           <Row>
             <h1>Number of EC2 Instances:</h1>
-            <Select
-              //styles={CustomSelectStyles}
-              options={Ec2Instances}
-              defaultValue={{ label: "Default" }}
-              // onChange={selectedOptions => {
-              //   setSortParams(selectedOptions.value);
-              // }}
-            ></Select>
+            <InputGroup size="lg" className="mb-3">
+              <FormControl
+                aria-label="Default"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </InputGroup>
+          </Row>
+        </div>
+        <br />
+        <div
+          style={{
+            width: "30%",
+            margin: "auto"
+          }}
+        >
+          <Row>
+            <h1>Number of Users:</h1>
+            <InputGroup size="lg" className="mb-3">
+              <FormControl
+                aria-label="Default"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </InputGroup>
           </Row>
         </div>
       </div>
