@@ -18,6 +18,7 @@ const Calculator = () => {
   //   apiData: {},
   //   dbData: {}
   // };
+  
   function calculateOnClick(numApi, numEc2, numUsers) {
     let ec2 = firebase.database().ref("EC2");
     ec2.on("value", snapshot => {
