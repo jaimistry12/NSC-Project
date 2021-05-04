@@ -40,7 +40,7 @@ export function Home() {
               textAlign: "center"
             }}
           >
-            SAAS Price Optimization
+            SAAS Cost Estimator
           </Jumbotron>
           <p
             style={{
@@ -60,9 +60,7 @@ export function Home() {
               fontWeight: "normal",
               textAlign: "center"
             }}
-          >
-            <b>Have a look around, we hope you enjoy what we have to offer!</b>
-          </p>
+          ></p>
 
           <Button
             style={{
