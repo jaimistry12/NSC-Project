@@ -125,6 +125,11 @@ const Calculator = () => {
                 <FormControl
                   aria-label="Default"
                   aria-describedby="inputGroup-sizing-default"
+                  style={{
+                    fontSize: "20px",
+                    fontFamily: "Verdana",
+                    position: "relative"
+                  }}
                   ref={api}
                 />
               </InputGroup>
@@ -145,6 +150,11 @@ const Calculator = () => {
                 <FormControl
                   aria-label="Default"
                   aria-describedby="inputGroup-sizing-default"
+                  style={{
+                    fontSize: "20px",
+                    fontFamily: "Verdana",
+                    position: "relative"
+                  }}
                   ref={ec2}
                 />
               </InputGroup>
@@ -165,6 +175,11 @@ const Calculator = () => {
                 <FormControl
                   aria-label="Default"
                   aria-describedby="inputGroup-sizing-default"
+                  style={{
+                    fontSize: "20px",
+                    fontFamily: "Verdana",
+                    position: "relative"
+                  }}
                   ref={users}
                 />
               </InputGroup>
@@ -199,10 +214,12 @@ const Calculator = () => {
               <p
                 id="Output"
                 style={{
+                  borderStyle: "solid",
+                  borderColor: "#153fc8d8",
                   color: "#77777",
                   fontFamily: "Verdana",
                   fontWeight: "bold",
-                  fontSize: "20px",
+                  fontSize: "30px",
                   textAlign: "center"
                 }}
               ></p>
