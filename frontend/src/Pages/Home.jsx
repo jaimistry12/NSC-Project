@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, Jumbotron } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
 export function Home() {
@@ -8,8 +8,12 @@ export function Home() {
     <React.Fragment>
       <div
         style={{
-          backgroundColor: "rgba(203, 221, 250, 0.808)",
+          backgroundColor: "EFEFEF",
           position: "absolute",
+          backgroundImage:
+            "url(" +
+            "https://t4.ftcdn.net/jpg/03/01/46/11/360_F_301461106_EXXsPkG6yiOPO4Lb2mGyzNjkcWIg39w7.jpg" +
+            ")",
           top: 0,
           width: "100%",
           height: "100%",
@@ -21,12 +25,15 @@ export function Home() {
       >
         <div
           style={{
+            borderStyle: "solid",
+            borderColor: "white",
+            padding: "30px",
             textAlign: "center"
           }}
         >
-          <h1
+          <Jumbotron
             style={{
-              color: "#77777",
+              color: "white",
               fontFamily: "Verdana",
               fontWeight: "bold",
               fontSize: "60px",
@@ -34,10 +41,10 @@ export function Home() {
             }}
           >
             SAAS Price Optimization
-          </h1>
+          </Jumbotron>
           <p
             style={{
-              color: "#77777",
+              color: "white",
               fontFamily: "Verdana",
               fontSize: "25px",
               textAlign: "center"
@@ -47,7 +54,7 @@ export function Home() {
           </p>
           <p
             style={{
-              color: "#555",
+              color: "white",
               fontFamily: "Verdana",
               fontSize: "25px",
               fontWeight: "normal",
@@ -60,7 +67,7 @@ export function Home() {
           <Button
             style={{
               color: "white",
-              backgroundColor: "#153fc8d8",
+              backgroundColor: "#024697",
               margin: "5%",
               fontSize: "20px",
               fontFamily: "Verdana",

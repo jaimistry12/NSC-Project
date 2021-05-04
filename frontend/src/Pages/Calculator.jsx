@@ -83,7 +83,7 @@ const Calculator = () => {
     <React.Fragment>
       <div
         style={{
-          backgroundColor: "rgba(203, 221, 250, 0.808)",
+          backgroundColor: "EFEFEF",
           position: "absolute",
           top: 0,
           width: "100%",
@@ -189,7 +189,7 @@ const Calculator = () => {
             <Button
               style={{
                 color: "white",
-                backgroundColor: "#153fc8d8",
+                backgroundColor: "#024697",
                 margin: "5%",
                 fontSize: "20px",
                 fontFamily: "Verdana",
@@ -215,7 +215,7 @@ const Calculator = () => {
                 id="Output"
                 style={{
                   borderStyle: "solid",
-                  borderColor: "#153fc8d8",
+                  borderColor: "#024697",
                   color: "#77777",
                   fontFamily: "Verdana",
                   fontWeight: "bold",
