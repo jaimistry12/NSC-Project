@@ -20,7 +20,7 @@ const Calculator = () => {
   // };
   
   function calculateOnClick(numApi, numEc2, numUsers) {
-    let ec2 = firebase.database().ref("EC2");
+    /*let ec2 = firebase.database().ref("EC2");
     ec2.on("value", snapshot => {
       const state = snapshot.val();
 
@@ -34,32 +34,41 @@ const Calculator = () => {
     );
     let EC2_instance_specifications_price = parseFloat(
       ec2Data[1].EC2_instance_specifications
-    );
+    );*/
     // let HTTP_APIs_price = parseFloat(this.state.apiData[0].HTTP_APIs)
     // let REST_APIs_price = parseFloat(this.state.apiData[1].REST_APIs)
     // let WebSocket_APIs_price = parseFloat(this.state.apiData[2].WebSocket_APIs)
     //let DBGB_monthly_space_price = parseFloat(this.state.dbData[0].DBGB_monthly_space_cost)
+
+    let Amazon_Elastic_Block_Storage_EBS_price = 3.00
+    let EC2_instance_specifications_price = 61.54
+
+
+    let HTTP_APIs_price = 1
+    let REST_APIs_price = 3.50
+    let WebSocket_APIs_price = 87.61
+    let DBGB_monthly_space_price = 0.2
 
     // calculations
     let total = 0;
 
     // for now for numApi -> make sure is 3 or greater
 
-    // let numEach = numApi / 3
-    // let remainder = numApi % 4
-    // let numHTTP = numEach
-    // let numREST = numEach
-    // let numWebSocket = numEach
+    let numEach = numApi / 3
+    let remainder = numApi % 4
+    let numHTTP = numEach
+    let numREST = numEach
+    let numWebSocket = numEach
 
-    // if (remainder === 1){
-    //   numHTTP++
-    // }
-    // if (remainder === 2){
-    //   numREST++
-    // }
+    if (remainder === 1){
+      numHTTP++
+    }
+    if (remainder === 2){
+      numREST++
+    }
 
-    // let apisPrice = (numHTTP * HTTP_APIs_price) + (numREST * REST_APIs_price) + (numWebSocket * WebSocket_APIs_price)
-    // total += apisPrice
+    let apisPrice = (numHTTP * HTTP_APIs_price) + (numREST * REST_APIs_price) + (numWebSocket * WebSocket_APIs_price)
+    total += apisPrice
 
     // for now for numEc2 -> num instances x price for 30 gb
 
@@ -72,8 +81,8 @@ const Calculator = () => {
     let dbTables = 10;
     let spacePerTableGb = 1;
 
-    //let backendPrice = (DBGB_monthly_space_price * dbTables * spacePerTableGb * numUsers)
-    //total += backendPrice
+    let backendPrice = (DBGB_monthly_space_price * dbTables * spacePerTableGb * numUsers)
+    total += backendPrice
     console.log(total);
     return total;
   }
